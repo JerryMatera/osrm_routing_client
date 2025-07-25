@@ -122,7 +122,7 @@ const translation = '''
                 "default": "Turn {modifier}  in {distance}",
                 "name": "Turn {modifier} to stay on {way_name}",
                 "destination": "Turn {modifier} towards {destination}",
-                "exit": "Turn {modifier} onto {way_name} in {distance}"
+                "exit": "Turn {modifier} onto {way_name} in {distance} meters"
             },
             "straight": {
                 "default": "Continue straight on {way_name} for {distance}",

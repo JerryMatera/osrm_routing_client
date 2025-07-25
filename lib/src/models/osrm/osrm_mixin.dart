@@ -200,6 +200,7 @@ mixin OSRMHelper {
       "modifier": modifierInstruction,
       "direction": directionFromDegree(step.maneuver.bearingBefore),
       "nth": nthWaypoint,
+      "distance": step.distance.toStringAsFixed(0)
     });
   }
 }
