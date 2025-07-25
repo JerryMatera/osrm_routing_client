@@ -119,10 +119,10 @@ const translation = '''
         },
         "continue": {
             "default": {
-                "default": "Turn {modifier}",
+                "default": "Turn {modifier}  in {distance}",
                 "name": "Turn {modifier} to stay on {way_name}",
                 "destination": "Turn {modifier} towards {destination}",
-                "exit": "Turn {modifier} onto {way_name}"
+                "exit": "Turn {modifier} onto {way_name} in {distance}"
             },
             "straight": {
                 "default": "Continue straight on {way_name} for {distance}",
