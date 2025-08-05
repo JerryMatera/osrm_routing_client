@@ -119,10 +119,10 @@ const translation = '''
         },
         "continue": {
             "default": {
-                "default": "Turn {modifier}  in {distance}",
-                "name": "Turn {modifier} to stay on {way_name}",
-                "destination": "Turn {modifier} towards {destination}",
-                "exit": "Turn {modifier} onto {way_name} in {distance} meters"
+                "default": "Turn {modifier} in {distance}",
+                "name": "Turn {modifier} onto {way_name} in {distance}",
+                "destination": "Turn {modifier} towards {destination} in {distance}",
+                "exit": "Turn {modifier} onto {way_name} in {distance}"
             },
             "straight": {
                 "default": "Continue straight on {way_name} for {distance}",
@@ -191,9 +191,9 @@ const translation = '''
         },
         "fork": {
             "default": {
-                "default": "Keep {modifier} at the fork",
-                "name": "Keep {modifier} onto {way_name}",
-                "destination": "Keep {modifier} towards {destination}"
+                "default": "Keep {modifier} at the fork in {distance}",
+                "name": "Keep {modifier} onto {way_name} in {distance}",
+                "destination": "Keep {modifier} towards {destination} in {distance}"
             },
             "slight left": {
                 "default": "Keep left at the fork",
@@ -223,9 +223,9 @@ const translation = '''
         },
         "merge": {
             "default": {
-                "default": "Merge {modifier}",
-                "name": "Merge {modifier} onto {way_name}",
-                "destination": "Merge {modifier} towards {destination}"
+                "default": "Merge {modifier} in {distance}",
+                "name": "Merge {modifier} onto {way_name} in {distance}",
+                "destination": "Merge {modifier} towards {destination} in {distance}"
             },
             "straight": {
                 "default": "Merge",
@@ -309,11 +309,11 @@ const translation = '''
         },
         "off ramp": {
             "default": {
-                "default": "Take the ramp",
-                "name": "Take the ramp onto {way_name}",
-                "destination": "Take the ramp towards {destination}",
-                "exit": "Take exit {exit}",
-                "exit_destination": "Take exit {exit} towards {destination}"
+                "default": "Take the ramp in {distance}",
+                "name": "Take the ramp onto {way_name} in {distance}",
+                "destination": "Take the ramp towards {destination} in {distance}",
+                "exit": "Take exit {exit} in {distance}",
+                "exit_destination": "Take exit {exit} towards {destination} in {distance}"
             },
             "left": {
                 "default": "Take the ramp on the left",
@@ -360,9 +360,9 @@ const translation = '''
         },
         "on ramp": {
             "default": {
-                "default": "Take the ramp",
-                "name": "Take the ramp onto {way_name}",
-                "destination": "Take the ramp towards {destination}"
+                "default": "Take the ramp in {distance}",
+                "name": "Take the ramp onto {way_name} in {distance}",
+                "destination": "Take the ramp towards {destination} in {distance}"
             },
             "left": {
                 "default": "Take the ramp on the left",
@@ -398,61 +398,58 @@ const translation = '''
         "rotary": {
             "default": {
                 "default": {
-                    "default": "Enter the roundabout",
-                    "name": "Enter the roundabout and exit onto {way_name}",
-                    "destination": "Enter the roundabout and exit towards {destination}"
+                    "default": "Enter the roundabout in {distance}",
+                    "name": "Enter the roundabout and exit onto {way_name} in {distance}",
+                    "destination": "Enter the roundabout and exit towards {destination} in {distance}"
                 },
                 "name": {
                     "default": "Enter {rotary_name}",
-                    "name": "Enter {rotary_name} and exit onto {way_name}",
-                    "destination": "Enter {rotary_name} and exit towards {destination}"
+                    "name": "Enter {rotary_name} and exit onto {way_name} in {distance}",
+                    "destination": "Enter {rotary_name} and exit towards {destination} in {distance}"
                 },
                 "exit": {
-                    "default": "Enter the roundabout and take the {exit_number} exit",
-                    "name": "Enter the roundabout and take the {exit_number} exit onto {way_name}",
-                    "destination": "Enter the roundabout and take the {exit_number} exit towards {destination}"
+                    "default": "Enter the roundabout and take the {exit_number} exit in {distance}",
+                    "name": "Enter the roundabout and take the {exit_number} exit onto {way_name} in {distance}",
+                    "destination": "Enter the roundabout and take the {exit_number} exit towards {destination} in {distance}"
                 },
                 "name_exit": {
                     "default": "Enter {rotary_name} and take the {exit_number} exit",
-                    "name": "Enter {rotary_name} and take the {exit_number} exit onto {way_name}",
-                    "destination": "Enter {rotary_name} and take the {exit_number} exit towards {destination}"
+                    "name": "Enter {rotary_name} and take the {exit_number} exit onto {way_name} in {distance}",
+                    "destination": "Enter {rotary_name} and take the {exit_number} exit towards {destination} in {distance}"
                 }
             }
         },
         "roundabout": {
             "default": {
                 "exit": {
-                    "default": "Enter the roundabout and take the {exit_number} exit",
-                    "name": "Enter the roundabout and take the {exit_number} exit onto {way_name}",
-                    "destination": "Enter the roundabout and take the {exit_number} exit towards {destination}"
+                    "default": "Enter the roundabout and take the {exit_number} exit in {distance}",
+                    "name": "Enter the roundabout and take the {exit_number} exit onto {way_name} in {distance}",
+                    "destination": "Enter the roundabout and take the {exit_number} exit towards {destination} in {distance}"
                 },
                 "default": {
                     "default": "Enter the roundabout",
-                    "name": "Enter the roundabout and exit onto {way_name}",
-                    "destination": "Enter the roundabout and exit towards {destination}"
+                    "name": "Enter the roundabout and exit onto {way_name} in {distance}",
+                    "destination": "Enter the roundabout and exit towards {destination} in {distance}"
                 }
             }
         },
         "roundabout turn": {
             "default": {
-                "default": "Make a {modifier}",
-                "name": "Make a {modifier} onto {way_name}",
-                "destination": "Make a {modifier} towards {destination}"
+                "default": "Make a {modifier} in {distance}",
+                "name": "Make a {modifier} onto {way_name} in {distance}",
+                "destination": "Make a {modifier} towards {destination} in {distance}"
             },
             "left": {
-                "default": "Turn left",
-                "name": "Turn left onto {way_name}",
-                "destination": "Turn left towards {destination}"
+                "default": "Turn left in {distance}",
+                "name": "Turn left onto {way_name} in {distance}",
+                "destination": "Turn left towards {destination} in {distance}",
+                "junction_name": "Turn left at {junction_name} in {distance}"
             },
             "right": {
-                "default": "Turn right",
-                "name": "Turn right onto {way_name}",
-                "destination": "Turn right towards {destination}"
-            },
-            "straight": {
-                "default": "Continue straight",
-                "name": "Continue straight onto {way_name}",
-                "destination": "Continue straight towards {destination}"
+                "default": "Turn right in {distance}",
+                "name": "Turn right onto {way_name} in {distance}", 
+                "destination": "Turn right towards {destination} in {distance}",
+                "junction_name": "Turn right at {junction_name} in {distance}"
             }
         },
         "exit roundabout": {
@@ -471,28 +468,22 @@ const translation = '''
         },
         "turn": {
             "default": {
-                "default": "Make a {modifier}",
-                "name": "Make a {modifier} onto {way_name}",
-                "destination": "Make a {modifier} towards {destination}",
-                "junction_name": "Make a {modifier} at {junction_name}"
+                "default": "Make a {modifier} in {distance}",
+                "name": "Make a {modifier} onto {way_name} in {distance}",
+                "destination": "Make a {modifier} towards {destination} in {distance}",
+                "junction_name": "Make a {modifier} at {junction_name} in {distance}"
             },
             "left": {
-                "default": "Turn left",
-                "name": "Turn left onto {way_name}",
-                "destination": "Turn left towards {destination}",
-                "junction_name": "Turn left at {junction_name}"
+                "default": "Turn left in {distance}",
+                "name": "Turn left onto {way_name} in {distance}",
+                "destination": "Turn left towards {destination} in {distance}",
+                "junction_name": "Turn left at {junction_name} in {distance}"
             },
             "right": {
-                "default": "Turn right",
-                "name": "Turn right onto {way_name}",
-                "destination": "Turn right towards {destination}",
-                "junction_name": "Turn right at {junction_name}"
-            },
-            "straight": {
-                "default": "Go straight",
-                "name": "Go straight onto {way_name}",
-                "destination": "Go straight towards {destination}",
-                "junction_name": "Go straight at {junction_name}"
+                "default": "Turn right in {distance}",
+                "name": "Turn right onto {way_name} in {distance}", 
+                "destination": "Turn right towards {destination} in {distance}",
+                "junction_name": "Turn right at {junction_name} in {distance}"
             }
         },
         "use lane": {
@@ -1195,7 +1186,7 @@ const translation = '''
             "uturn": {
                 "default": "180°-Wendung am Ende der Straße",
                 "name": "180°-Wendung auf {way_name} am Ende der Straße",
-                "destination": "180°-Wendung Richtung {destination} am Ende der Straße",
+                "destination": "180°-Wendung Richtung {destination} am نهاية der Straße",
                 "junction_name": "180°-Wendung an {junction_name}"
             }
         },
@@ -1355,7 +1346,7 @@ const translation = '''
             },
             "slight left": {
                 "default": "Ausfahrt links nehmen",
-                "name": "Ausfahrt links nehmen auf {way_name}",
+                "name": "Ausfahrt links nehmen على {way_name}",
                 "destination": "Ausfahrt links nehmen Richtung {destination}",
                 "exit": "Ausfahrt {exit} nehmen",
                 "exit_destination": "Ausfahrt {exit} links nehmen Richtung {destination}"
@@ -1425,7 +1416,7 @@ const translation = '''
                 "name_exit": {
                     "default": "In den Kreisverkehr fahren und {exit_number} Ausfahrt nehmen",
                     "name": "In den Kreisverkehr fahren und {exit_number} Ausfahrt nehmen auf {way_name}",
-                    "destination": "In den Kreisverkehr fahren und {exit_number} Ausfahrt nehmen Richtung {destination}"
+                    "destination": "In den Kreisverkehr fahren و {exit_number} Ausfahrt nehmen Richtung {destination}"
                 }
             }
         },
@@ -2050,4 +2041,4 @@ const translation = '''
         }
     }
 }
-}''';
+''';

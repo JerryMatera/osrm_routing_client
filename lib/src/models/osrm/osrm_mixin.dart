@@ -200,7 +200,7 @@ mixin OSRMHelper {
       "modifier": modifierInstruction,
       "direction": directionFromDegree(step.maneuver.bearingBefore),
       "nth": nthWaypoint,
-      "distance": step.distance.toStringAsFixed(0)
+      "distance": formatDistance(step.distance)
     });
   }
 }
@@ -279,3 +279,12 @@ String? laneConfig(RoadStep step) {
   });
   return config.join();
 }
+
+String formatDistance(double distanceInMeters) {
+    if (distanceInMeters < 1000) {
+      return '${distanceInMeters.round()} meters';
+    } else {
+      final km = (distanceInMeters / 1000).toStringAsFixed(1);
+      return '$km kilometers';
+    }
+  }
